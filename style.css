@@ -1,0 +1,254 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(55, 55, 145);
+  font-family: sans-serif;
+}
+
+.container {
+  max-width: 100%;
+  background: rgb(98, 50, 126);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom: 2px solid #a6ffa3;
+  border-left: 2px solid #a6ffa3;
+  border-right: 2px solid #a6ffa3;
+}
+
+.menu-section {
+  margin: 0px 20px 0px 20px;
+}
+
+.menu-section ul {
+  display: flex;
+  justify-content: space-between;
+}
+.container li a {
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.267);
+  margin: 10px 5px 10px 10px;
+  border-radius: 5px;
+}
+.routine-items {
+  text-align: center;
+  font-family: sans-serif;
+  background: rgb(255 255 255 / 47%);
+  margin: 10px 0 0px 0;
+  height: 100%;
+  border: 2px solid #a6ffa3;
+  border-radius: 5px;
+  padding: 30px 20px 0px 20px;
+}
+
+.routine-items h1 {
+  color: rgb(71, 123, 207);
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.377);
+  border: 2px solid rgb(119, 0, 255);
+  padding: 5px;
+}
+.new-task-form {
+  margin-bottom: 10px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.todo_item {
+  display: flex;
+  margin-bottom: 10px;
+  align-items:center
+}
+.todo_item p {
+  border: 2px solid #0014ffc2;
+  width: 100%;
+  text-align: left;
+  margin: 0px 5px 0px 5px;
+  border-radius: 5px;
+  font-family: sans-serif, Arial;
+  font-size: 25px;
+  font-weight: 800;
+  padding: 0px 0px 0px 5px;
+  background: #eae3e7c2;
+  color:black;
+}
+
+.checkbox_button {
+  height: 29px;
+  width: 35px;
+}
+
+.checkbox_button:checked + p {
+  text-decoration: line-through;
+  font-style: italic;
+  opacity: 40%;
+}
+
+.delete_button {
+	height:30px;
+  width: 36px;
+  border-radius: 5px;
+  border: none;
+}
+.delete_button:active {
+  background: red;
+}
+/*
+.tasks {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  background: rgba(35, 158, 131, 0.404);
+  border-radius: 5px;
+  padding-left: 5px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.tasks button {
+  margin: 5px 8px 0px 0px;
+  padding: 5px 8px 5px 8px;
+  background: white;
+  border: 2px solid grey;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.tasks button:active {
+  background: rgb(26, 255, 0);
+  border-color: black;
+  border-radius: 5;
+}
+*/
+.new-task-form {
+  background: rgba(255, 255, 255, 0.356);
+  padding: 5px;
+  border-radius: 5px;
+}
+.new-task-form button {
+  border-radius: 5px;
+  border: none;
+  background: rgba(255, 255, 255, 0.719);
+  font-weight: bold;
+  padding: 8px 5px 8px 5px;
+  transition: 0.3s ease-out;
+}
+
+.new-task-form button:active {
+  background: rgb(26, 255, 0);
+}
+.new-task-form input {
+  background: rgba(226, 224, 224, 0.548);
+  border:none; 
+  border-radius: 5px;
+  max-width: 768px;
+  width: 100%;
+  height: 50px;
+  font-size: 23px;
+  font-weight: 500;
+  margin-right: 9px;
+  padding-left: 8px;
+  transition: 0.3s ease-out;
+}
+.new-task-form input:focus {
+  background-color: rgb(255 255 255 / 85%);
+  border:none
+}
+
+.mobile-extra-menus {
+  display: none;
+}
+
+@media (max-width: 550px) {
+  .mobile-extra-menus {
+    display: flex;
+  }
+  .container li {
+    margin: 60px 5px 10px 10px;
+  }
+  .menu-section nav {
+    display: none;
+  }
+  .container.on img {
+    display: none;
+  }
+  .menu-toggle {
+    width: 40px;
+    height: 30px;
+    margin-right: 20px;
+  }
+  .one,
+  .two,
+  .three {
+    background-color: #fff;
+    height: 5px;
+    width: 100%;
+    margin: 6px auto;
+    transition-duration: 0.3s;
+  }
+  .container.on {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    width: 100vw;
+    height: 80vh;
+    background: #483f92;
+    display: flex;
+    justify-content: center;
+  }
+  .container.on nav {
+    display: flex;
+  }
+  .container.on .menu-toggle {
+    position: absolute;
+    right: 0px;
+    margin-right: 40px;
+    top: 16px;
+  }
+
+  .container.on ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-weight: 900;
+  }
+  .container li a {
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.267);
+    margin: 10px 5px 10px 10px;
+    border-radius: 5px;
+    transition: 0.1s ease-out;
+    color: rgb(229, 255, 0);
+  }
+
+  .container li a:active {
+    color: white;
+    background: rgba(255, 255, 255, 0.61);
+  }
+
+  /*TRANSITION ANIMATION MENU TOGGLE*/
+  .container.on .one {
+    transform: rotate(45deg) translate(7px, 7px);
+  }
+  .container.on .two {
+    opacity: 0;
+  }
+  .container.on .three {
+    transform: rotate(-45deg) translate(8px, -9px);
+  }
+  @media (max-width: 360px) {
+    .todo_item {
+      max-width: 318px;
+    }
+  }
+}

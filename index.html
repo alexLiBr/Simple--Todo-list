@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link
+        rel="stylesheet"
+        href="style.css"
+    />
+    <meta charset="UTF-8" />
+    <meta
+        http-equiv="X-UA-Compatible"
+        content="IE=edge"
+    />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    />
+    <title>Routine</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <img
+                src="./images/sunrise-svgrepo-com.svg"
+                width="60px"
+                style="margin: 2px 0px 1px 20px"
+            />
+            <div class="menu-section">
+                <div class="menu-toggle">
+                    <div class="one"></div>
+                    <div class="two"></div>
+                    <div class="three"></div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="https://www.oxfordlearnersdictionaries.com/us/" target="_blank">Oxford_Dict</a></li>
+			<li><a href="https://context.reverso.net/translation/portuguese-english/" target="_blank">Reverso_PT_EN</a></li>
+                        <li><a href="https://context.reverso.net/translation/english-portuguese" target="_blank">Reverso_EN_PT</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+		    <div class="mobile-extra-menus">
+                     <ul>
+                        <li><a href="#" target="_blank">Starter</a></li>
+                        <li><a href="#" target="_blank">Bootcamp</a></li>
+                        <li><a href="#" target="_blank">Comunidade</a></li>
+                        <li><a href="#" target="_blank">Blog</a></li>
+		     </ul>
+		    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!--TODO LIST SECTION -->
+    <section class="routine-items">
+        <h1>LISTA DE TAREFAS</h1>
+        <form
+            class="new-task-form"
+            onsubmit="addItem(); return false"
+        >
+            <input
+                class="new-task-input"
+                type="text"
+                placeHolder="Nova Tarefa..."
+            ></input>
+            <button type="submit">ADD</button>
+        </form>
+        <div
+            class="todo_list"
+            id="todoList"
+        >
+            <label class="todo_item">
+            </label>
+        </div>
+    </section>
+</body>
+<script src="./scripts2.js"></script>
+
+</html>
